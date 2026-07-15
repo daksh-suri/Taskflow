@@ -1,0 +1,25 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-main {
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--spacing-6);
+  padding-right: var(--spacing-6);
+}
+
+.section {
+  padding: var(--spacing-20) 0;
+}
+
+.section-sm {
+  padding: var(--spacing-12) 0;
+}
