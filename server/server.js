@@ -1,5 +1,4 @@
 require('dotenv').config();
-const path = require('path');
 const express = require('express');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
@@ -33,13 +32,6 @@ app.use(cookieParser());
 app.use('/api', routes);
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
-
-const clientDist = path.join(__dirname, '..', 'client', 'dist');
-app.use(express.static(clientDist));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(clientDist, 'index.html'));
-});
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Route not found' });
