@@ -4,7 +4,8 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../pages/Home/HomePage.vue')
+    component: () => import('../pages/Home/HomePage.vue'),
+    meta: { guest: true }
   },
   {
     path: '/login',
